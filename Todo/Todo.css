@@ -2,10 +2,15 @@ body{
     margin: 5px;
     background-color: aqua;
 }
+h1, h4{
+    text-align: center;
+    color: black;
+}
 
 #tasks{
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 .flex-container{
     cursor: pointer;
@@ -14,7 +19,6 @@ body{
     background-color: black;
     border-radius: 10px;
     justify-content: space-between;
-    align-items: space-between;
     flex-wrap: wrap;
 }
 
@@ -23,7 +27,7 @@ body{
 }
 
 .check{
-    background-color: yellow;
+    background-color: blueviolet;
     border: 1px solid black;
     border-radius: 5px;
     color: white;
