@@ -1,0 +1,424 @@
+* {
+  padding: auto;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+section {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  color: #666;
+  text-align: center;
+}
+
+/* External CSS */
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+/* Task Details */
+details {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px;
+}
+h3 {
+  text-align: center;
+  padding-top: 5px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.text-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.highlight-text {
+  background-color: yellow;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.lowercase-text {
+  text-transform: lowercase;
+}
+
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+.border-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.border-example {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #666;
+}
+
+.dotted-border {
+  border-style: dotted;
+}
+
+.dashed-border {
+  border-style: dashed;
+}
+
+.solid-border {
+  border-style: solid;
+}
+
+.double-border {
+  border-style: double;
+}
+
+.groove-border {
+  border-style: groove;
+}
+
+.ridge-border {
+  border-style: ridge;
+}
+
+.inset-border {
+  border-style: inset;
+}
+
+.outset-border {
+  border-style: outset;
+}
+
+.rounded-border {
+  border-radius: 10px;
+}
+
+.border-color-example {
+  border: 2px solid #666;
+}
+
+.border-color-red {
+  border-color: red;
+}
+
+.border-color-green {
+  border-color: green;
+}
+
+.border-color-blue {
+  border-color: blue;
+}
+
+.border-width-example {
+  border-style: solid;
+}
+
+.border-width-thin {
+  border-width: thin;
+}
+
+.border-width-medium {
+  border-width: medium;
+}
+
+.border-width-thick {
+  border-width: thick;
+}
+
+.border-width-custom {
+  border-width: 5px;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.flex-item {
+  background-color: #ccc;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-flex-start {
+  align-items: flex-start;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+a:link {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+/* Pseudo-elements */
+p::first-line {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 24px;
+  color: purple;
+}
+
+/* CSS Selectors */
+h2 + p {
+  font-style: italic;
+}
+
+ul > li {
+  color: green;
+}
+
+.highlight {
+  background-color: pink;
+}
