@@ -1,0 +1,44 @@
+body{
+    margin: 5px;
+    background-color: aqua;
+}
+h1, h4{
+    text-align: center;
+    color: black;
+}
+
+#tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.flex-container{
+    cursor: pointer;
+    display: flex;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-container:hover{
+    background-color: #333;
+}
+
+.check{
+    background-color: blueviolet;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.text, .sr-no{
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+}
