@@ -101,3 +101,47 @@ while (j < 5) {
   document.getElementById("demo").innerHTML += `<p>While loop: ${j}</p>`;
   j++;
 }
+// Function to change the text color
+    function changeColor() {
+      var message = document.getElementById('message');
+      message.style.color = 'red';
+    }
+    
+    // Event listener for button click
+    var button = document.getElementById('btn');
+    button.addEventListener('click', changeColor);
+    
+    // Function to highlight the paragraph
+    function highlight() {
+      var paragraph = document.getElementById('message');
+      paragraph.classList.add('highlight');
+    }
+    
+    // Event listener for mouseover event
+    var paragraph = document.getElementById('message');
+    paragraph.addEventListener('mouseover', highlight);
+    
+    // Function to remove the highlight
+    function removeHighlight() {
+      var paragraph = document.getElementById('message');
+      paragraph.classList.remove('highlight');
+    }
+    
+    // Event listener for mouseout event
+paragraph.addEventListener('mouseout', removeHighlight);
+    
+// Function to show the welcome message
+function showWelcomeMessage() {
+  var nameInput = document.getElementById('name');
+  var welcomeMsg = document.getElementById('welcomeMsg');
+  
+  // Get the value from the name input
+  var name = nameInput.value;
+  
+  // Update the welcome message with the name
+  welcomeMsg.textContent = 'Welcome, ' + name + '! to The FasTech Internship.';
+}
+
+// Event listener for button click
+var button = document.querySelector('.welcome-message');
+button.addEventListener('click', showWelcomeMessage);
