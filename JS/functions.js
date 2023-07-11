@@ -22,3 +22,29 @@ const squareRoot = (x)=>Math.sqrt(x);
 console.log(`Square root of 10 is : ${squareRoot(10)}`);
 console.log(`Square root of 100 is : ${squareRoot(100)}`);
 console.log();
+
+
+console.log('***Call back functions');
+
+const waitInterval = 500;
+let curTime = 0;
+const totalTime = 3000;
+function startTime(callBack){
+    setTimeout(()=>{
+        clearInterval(ID);
+        callBack('Time out');
+        
+    }, totalTime);
+    const ID = setInterval(function(){
+        console.log(`Current Time: ${curTime/1000}`)
+        curTime += waitInterval;
+    }, waitInterval);
+}
+
+startTime(function(value){
+    console.log(`${value}`);
+    console.log();
+});
+
+
+
