@@ -5,5 +5,19 @@ btn.addEventListener("click", function(){
         alert("Please Select a Color");
         return;
     }
-    document.body.style.backgroundColor = color;            
+    document.body.style.backgroundColor = color;
+    
 });
+
+function saveData(e){
+    console.log(e);
+    e.preventDefault();
+    const firstname = document.getElementById('firstname').value;
+    const secondname = document.getElementById('secondname').value;
+    const date = document.getElementById('date').value;
+    if(firstname === '' || secondname==='' || date===''){
+        alert('Please fill all fields');
+        return;
+    }
+    alert(`Data saved!!\nFirstname: ${firstname} | Lastname: ${secondname} | date: ${date}`);
+}
