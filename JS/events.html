@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body onload="dataLoaded()">
+    <form onsubmit="handle()">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Second name">
+        <input type="date">
+        <input type="submit">
+    </form>
+
+    <script>
+
+        function dataLoaded(){
+            alert('Data loaded successfully');
+        }
+
+        
+
+        function handle(e){
+            e.preventDefault();
+            
+            alert('Your data is saved successfully');
+        }
+        
+    </script>
+    
+</body>
+</html>
