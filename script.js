@@ -152,6 +152,7 @@ button.addEventListener('click', showWelcomeMessage);
 // 5. Destructing objects to assign value to variable
 // 6. Higher order arrow functions
 // 7. Rest operator with function parameters
+console.log("ES6 Started")
 // /******************************************************
 // ************************** 1. Promises *******************
 // ********************************************************/
