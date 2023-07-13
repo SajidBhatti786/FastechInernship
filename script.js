@@ -300,7 +300,7 @@ console.log(PI)
 /******************************************************
 ************************** 5. Destructing objects to assgin value to variable *******************
 ********************************************************/
-const person = {
+const person1 = {
     name: "sajid",
     email: "sbhattti1212@gmail.com"
 }
@@ -310,7 +310,7 @@ const personal = {
     email: "sbhatti1212@gmail.com"
 }
 
-const {name: myName} = person;
+const {name: myName} = person1;
 const {name: {nickName: myNickName} } = personal;
 console.log(myName);
 console.log(myNickName);
