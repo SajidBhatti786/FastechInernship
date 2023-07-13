@@ -145,3 +145,202 @@ function showWelcomeMessage() {
 // Event listener for button click
 var button = document.querySelector('.welcome-message');
 button.addEventListener('click', showWelcomeMessage);
+// 1. Promises
+// 2. Fetch
+// 3. Async and await
+// 4. Immutable array and objects
+// 5. Destructing objects to assign value to variable
+// 6. Higher order arrow functions
+// 7. Rest operator with function parameters
+// /******************************************************
+// ************************** 1. Promises *******************
+// ********************************************************/
+const buyFlightTicket = () =>{
+
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const error = false;
+
+            if(error){
+                reject("Unsuccessful Operation!")
+            }
+            else{
+                resolve("Successful Operation!!")
+            }
+
+
+        },3000)
+
+
+    });
+
+
+}
+
+buyFlightTicket()
+.then((success)=> console.log(success))
+.catch((reject)=> console.log(reject));
+
+
+/**
+ * Promises - Challenge
+ * Create a promise that returns some user data and throws an error when not found.
+ * Log the user data when listening to the promise as well as log the error.
+ *
+ * Docs - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+*/
+
+const userData = new Promise((resolve,reject) => {
+
+    const error = true;
+    if(error){
+        reject("No data found!")
+    }
+    else{
+        resolve({
+            name: "Sajid",
+            age: 22,
+            email: "sbhattti1212@gmail.com"
+        })
+    }
+
+});
+
+userData
+.then((success)=> console.log(success))
+.catch((error)=> console.log(error))
+
+
+/******************************************************
+************************** 2. Fetch *******************
+********************************************************/
+//fetching data
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+.then((response)=> response.json())
+.then((data)=> console.log(data))
+//posting data
+fetch('https://jsonplaceholder.typicode.com/comments',{
+    method: "POST",
+    body: JSON.stringify({
+        id: 1,
+        name: "Sajid",
+        email: "sbhatti1212@gmail.com",
+        body: "This is awesome"
+    }
+    )
+})
+.then((response)=> response.json())
+.then((data)=> console.log(data))
+
+/******************************************************
+************************** 3. Async and Await *******************
+********************************************************/
+//async only
+let photos = [];
+
+ async function photoUpload(){
+    var uploadStatus =  new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            photos.push("profile picture");
+            resolve("photo uploaded")
+        },3000)
+    })
+
+    let result = await uploadStatus;
+    console.log(result);
+    console.log(photos)
+
+}
+
+photoUpload();
+//async await with fetch
+
+apiUrl = "https://api.chucknorris.io/jokes/random"
+
+async function getJoke(){
+   const Response = await fetch('https://api.chucknorris.io/jokes/random');
+   const data = await Response.json();
+   console.log(data);
+
+}
+getJoke();
+
+/******************************************************
+************************** 4. Immutable array and objects *******************
+********************************************************/
+
+const arr = [1,2,3]
+// arr = [4,2,5] we can change like this
+arr[0]=4,arr[1]=2,arr[2]=5; //instead we can change like this
+
+//sets
+mySet = new Set([1,3,4])
+console.log(mySet);
+// prevent object mutation
+function myObject(){
+    "use strict";  // use strict mode to prevent mutation
+    const Math_constants = {
+        PI: 3.14
+    };
+
+    Object.freeze(Math_constants); // this is used to prevent mutation
+    try{
+        Math_constants.PI = 99;
+    }
+    catch(ex)
+    {
+        console.log(ex)
+    }
+    return Math_constants.PI;
+}
+
+const PI = myObject();
+console.log(PI)
+
+/******************************************************
+************************** 5. Destructing objects to assgin value to variable *******************
+********************************************************/
+const person = {
+    name: "sajid",
+    email: "sbhattti1212@gmail.com"
+}
+//nested
+const personal = {
+    name : { official: "sajid",nickName: "sajoo"},
+    email: "sbhatti1212@gmail.com"
+}
+
+const {name: myName} = person;
+const {name: {nickName: myNickName} } = personal;
+console.log(myName);
+console.log(myNickName);
+
+/******************************************************
+************************** 6. Higher Order Arrow functions *******************
+********************************************************/
+/* 1. filter
+   2. reduce
+   3. map
+   4. find
+   5. forEach */
+
+
+const array = [1,-23,89,3.4,11];
+
+const squareList = (arr = [1,3,4])=>{  // we can also define default value like this
+    const squaredIntegers = arr.filter(num=> Number.isInteger(num) && num >0).map(x=> x*x);
+    return squaredIntegers;
+}
+
+const sqlist = squareList(array);
+console.log(sqlist);
+
+/******************************************************
+************************** 7. Rest Operator for function parameter *******************
+********************************************************/
+
+function myFunction(...arg){
+
+    return arg.reduce((a,b)=> a+b,0);
+}
+console.log(myFunction(1,3,4));
