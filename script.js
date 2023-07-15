@@ -145,6 +145,11 @@ function showWelcomeMessage() {
 // Event listener for button click
 var button = document.querySelector('.welcome-message');
 button.addEventListener('click', showWelcomeMessage);
+/*
+  ***************************************************
+ *******************  ES6 Topics *********************
+ ****************************************************
+*/
 // 1. Promises
 // 2. Fetch
 // 3. Async and await
