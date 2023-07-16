@@ -145,6 +145,49 @@ function showWelcomeMessage() {
 // Event listener for button click
 var button = document.querySelector('.welcome-message');
 button.addEventListener('click', showWelcomeMessage);
+
+/*
+  ***************************************************
+ *******************  DOM Manipulation *********************
+ ****************************************************
+*/
+// getElementById
+const title = document.getElementById('title');
+title.innerHTML = 'Updated Title with getElementById: DOM Manipulation ';
+title.style.color = 'red';
+
+// getElementsByClassName
+const elementsByClass = document.getElementsByClassName('myClassName');
+for (let i = 0; i < elementsByClass.length; i++) {
+  elementsByClass[i].innerText = 'Updated Text';
+  elementsByClass[i].classList.add('highlight');
+}
+
+// getElementsByName
+const elementsByName = document.getElementsByName('myName');
+console.log(elementsByName);
+
+// getElementsByTagName
+const elementsByTag = document.getElementsByTagName('p');
+console.log(elementsByTag);
+
+// innerHTML
+const myDiv = document.getElementById('myDiv');
+myDiv.innerHTML = '<p>New HTML content</p>';
+
+// innerText
+const firstParagraph = document.getElementsByClassName('myClassName')[0];
+console.log(firstParagraph.innerText);
+
+// textContent
+const secondParagraph = document.getElementsByClassName('myClassName')[1];
+console.log(secondParagraph.textContent);
+
+// value
+const myInput = document.getElementById('myInput');
+console.log(myInput.value);
+myInput.value = 'New value';
+
 /*
   ***************************************************
  *******************  ES6 Topics *********************
